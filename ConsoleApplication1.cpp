@@ -12,7 +12,7 @@ char def(char string[100])
     q = string[2];
     string[2] = string[3];
     string[3] = q;
-
+    if (string[0] == 0); string[0] = ' ';
     cout << string << endl;
     cout << ' ';
     return 0;
