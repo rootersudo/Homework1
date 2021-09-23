@@ -8,7 +8,7 @@ int main(int argc, char* argv[])
 {
     setlocale(LC_ALL, "Russian");
     char string[5];
-    cout << "Введите число \n";
+    cout << "Введите четырехзначное число \n";
     cin >>(string);
     char q;
     q = string[0];
