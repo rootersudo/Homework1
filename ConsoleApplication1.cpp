@@ -1,47 +1,36 @@
 // ConsoleApplication1.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
 
+// Online C++ compiler to run C++ program online
+// Online C++ compiler to run C++ program online
 #include <iostream>
 using namespace std;
-char def(char string[100])
-{
-    char q;
-    q = string[0];
-    string[0] = string[1];
-    string[1] = q;
-    q = string[2];
-    string[2] = string[3];
-    string[3] = q;
-    if (string[0] == 0); string[0] = ' ';
-    cout << string << endl;
-    cout << ' ';
-    return 0;
-}
 
-int main(int argc, char* argv[])
-{
-    setlocale(LC_ALL, "Russian");
-    char string[100];
+int c1;
+int main()
+{   int a,b,c,d;
+    setlocale(LC_ALL, "Russian");  
     cout << "Введите четырёхзначное число \n";
-    cin >>(string);
-    if (strlen(string) != 4)
-    {
-        cout << "Неверное число" << endl;
-        cout << "Введите четырёхзначное число \n";
-        cin >> (string);
-        if (strlen(string) != 4)
-        {
-            cout << "Я Вам не доверяю. Перезапустите программу\n";
-            cout << "Программа завершилась\n";
-            system("exit");
-        }
-        else { def(string); }
+    
+    
+    cin >> c1;
+    a=c1/1000;
+    b=c1/100 - a*10;
+    c=c1/10-a/100-b*10;
+    d=c1-a*100-b*100-c*10;
+    
+    if (b==0){
+    cout<<a<<d<<c;
     }
-    else {
-        def(string);
 
-       
-    }
+   
+    while (true) do {if (c1>9999)
+    {cout<<"Введено неверное число, попробуйте ещё раз\n";
+    cin >> c1;
+    }  
+    else {cout <<b<<a<<d<<c;}
+        
 }
-
-
+    return 0;
+}    
+  
