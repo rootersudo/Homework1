@@ -1,36 +1,44 @@
 // ConsoleApplication1.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
 
-// Online C++ compiler to run C++ program online
-// Online C++ compiler to run C++ program online
+
 #include <iostream>
 using namespace std;
+void check(int c1) {
+    int a, b, c, d,q;
+    q = 1;
+    if ((c1 > 9999) or (c1 < 1000))
+    {
+        while (true) {
 
+            cout << "Введено неверное число, попробуйте ещё раз\n";
+            cin >> c1;
+            if ((c1 > 1000) and (c1 < 100000)) { break; }
+            
+        } q = 1;
+    }
+        if (q == 1) {
+            a = c1 / 1000;
+            b = c1 % 1000 / 100;
+            c = c1 % 100 / 10;
+            d = c1 % 10;
+            if (b == 0) {
+                cout << a << d << c << endl;
+            }
+            else {
+                cout << b << a << d << c << endl;
+            }
+        };
+    
+}
 int c1;
 int main()
-{   int a,b,c,d;
-    setlocale(LC_ALL, "Russian");  
-    cout << "Введите четырёхзначное число \n";
-    
-    
-    cin >> c1;
-    a=c1/1000;
-    b=c1/100 - a*10;
-    c=c1/10-a/100-b*10;
-    d=c1-a*100-b*100-c*10;
-    
-    if (b==0){
-    cout<<a<<d<<c;
-    }
-
-   
-    while (true) do {if (c1>9999)
-    {cout<<"Введено неверное число, попробуйте ещё раз\n";
-    cin >> c1;
-    }  
-    else {cout <<b<<a<<d<<c;}
+{
+    while (true)  {
         
+        setlocale(0, "RU");
+        cout << "Введите четырёхзначное число  ***вводите только цифры*** \n";
+        cin >> c1;
+        check(c1);
+    }
 }
-    return 0;
-}    
-  
